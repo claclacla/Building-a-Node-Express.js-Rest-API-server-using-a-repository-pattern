@@ -1,0 +1,23 @@
+{
+  "name": "how-to-update-your-data-using-patch-http-method",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "e2e-test": "mocha --ui tdd test/e2e",
+    "unit-test": "mocha --ui tdd test/unit"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "async": "^2.4.0",
+    "body-parser": "~1.17.1",
+    "config": "^1.26.1",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "forerunnerdb": "^1.4.40",
+    "js-yaml": "^3.8.3",
+    "mocha": "^3.3.0",
+    "shortid": "^2.2.8",
+    "supertest": "^3.0.0"
+  }
+}
