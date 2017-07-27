@@ -11,13 +11,13 @@ var appPort = config.get("app.port");
 var server = supertest.agent("http://localhost:" + appPort);
 
 var blogCategoryUid = UID.create();
-var blogCategoryName = "Javascript";
+var blogCategoryName = "AngularJs 2";
 
 var blogCategory = new BlogCategoryDTO(blogCategoryUid);
-blogCategory.name = blogCategoryName;
+blogCategory.name = "AngularJs";
 
 var newBlogCategoryUid = UID.create();
-var newBlogCategoryName = "AngularJs 2";
+var newBlogCategoryName = "Javascript";
 
 var newBlogCategory = new BlogCategoryDTO(newBlogCategoryUid);
 newBlogCategory.name = newBlogCategoryName;
@@ -62,7 +62,7 @@ suite('BlogCategory test', function () {
 
   test("Should update the previous blog category and return a response with status: 200 and the blog category data as body", function (done) {
     blogCategory = new BlogCategoryDTO(blogCategoryUid);
-    blogCategory.name = newBlogCategoryName;
+    blogCategory.name = blogCategoryName;
 
     server
       .put('/blogCategory/' + blogCategoryUid)
